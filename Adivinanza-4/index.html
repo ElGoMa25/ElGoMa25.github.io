@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palillos Inquietos - 8x9</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Adivinanza 1</h1>
+  <h2>Palillos Inquietos</h2>
+  <p>Haz clic en las aristas para ocultarlas o mostrarlas. ¡Oculta 5 aristas para que queden 3 cuadrados!</p>
+  
+  <button id="mostrarBtn">Mostrar Contenido</button>
+    <div id="contenido">
+      <div class="grid-container">
+        <!-- Aristas horizontales (9 en total) -->
+        <div class="horizontal edge" data-edge="1"></div>
+        <div class="horizontal edge" data-edge="2"></div>
+        <div class="horizontal edge" data-edge="3"></div>
+        <div class="horizontal edge" data-edge="4"></div>
+        <div class="horizontal edge" data-edge="5"></div>
+        <div class="horizontal edge" data-edge="6"></div>
+        <div class="horizontal edge" data-edge="7"></div>
+        <div class="horizontal edge" data-edge="8"></div>
+        <div class="horizontal edge" data-edge="9"></div>
+    
+        <!-- Aristas verticales (8 en total) -->
+        <div class="vertical edge" data-edge="10"></div>
+        <div class="vertical edge" data-edge="11"></div>
+        <div class="vertical edge" data-edge="12"></div>
+        <div class="vertical edge" data-edge="13"></div>
+        <div class="vertical edge" data-edge="14"></div>
+        <div class="vertical edge" data-edge="15"></div>
+        <div class="vertical edge" data-edge="16"></div>
+        <div class="vertical edge" data-edge="17"></div>
+      </div>
+    </div>
+
+  
+  <button id="back-button" onclick="goBack()">Volver al inicio</button>
+  <script src="script.js"></script>
+</body>
+</html>

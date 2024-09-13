@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinanza 1</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 15%;
+            height: auto;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        button {
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #message {
+            margin-top: 50px;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        #back-button {
+            margin-top: 40px;
+            font-size: 1.5rem;
+            padding: 10px 30px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #back-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adivinanza 1</h1>
+    <p>
+        Cuatro hombres llegan a un río por la noche. Hay un puente estrecho, el cual sólo soporta a dos personas a la vez. Los individuos cuentan con una linterna para alumbrarse, imprescindible si se quiere llegar al otro lado, ya que está todo oscuro y sin iluminación es imposible. Por lo tanto, si cruzan dos personas, una debe volver –inevitablemente– para que puedan cruzar los demás. Se sabe que el individuo A puede cruzar el puente en 1 minuto; el B, en 2 minutos. El C y el D, en 5 y 8 respectivamente. Este sólo soporta a dos personas a la vez. Entonces, ¿pueden cruzar todo el puente en quince minutos o menos?
+    </p>
+    <img src="./Img.jpg" alt="Imagen de un río con dos lados">
+    <div class="button-container">
+        <button onclick="showMessage('yes')">Sí</button>
+        <button onclick="showMessage('no')">No</button>
+    </div>
+    <div id="message"></div>
+    <button id="back-button" onclick="goBack()">Volver al inicio</button>
+
+    <script>
+        function showMessage(answer) {
+            var messageElement = document.getElementById('message');
+            if (answer === 'yes') {
+                messageElement.innerHTML = "Lo lograste, Felicidades. ¿Cuántos intentos logró conseguirlo?";
+                messageElement.style.color = "green";
+            } else if (answer === 'no') {
+                messageElement.innerHTML = "Buen intento, una pista: intenta cruzar primero con los que demoran menos en cruzar.";
+                messageElement.style.color = "red";
+            }
+        }
+        function goBack() {
+            window.location.href = "../index.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Estilo para el enunciado */
+.header {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Estilo de la página */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #87CEEB; /* Color del cielo */
+  }
+  
+  /* Contenedor del río */
+  .river-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  /* Estilo del río */
+  .river {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 150px;
+    background-color: #1E90FF; /* Color del agua */
+  }
+  
+  /* Estilo de los personajes */
+  .characters {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .person {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  }
+  
+  .in-raft {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  /* Estilo de la balsa */
+  .raft {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #8B4513; /* Color de la balsa */
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 5s linear;
+  }
+  
+  /* Botones y mensajes */
+  .controls {
+    margin-top: 20px;
+  }
+  
+  button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #243020;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .in-raft {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+}
+.crossed {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px; /* Espacio entre los personajes */
+  width: 100px;
+  height: 100px;
+}
+
+#back-button {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#back-button:hover {
+  background-color: #218838;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cruzando el río</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="header">
+    <h1>Adivinanza 1</h1>
+    <h2>Un padre y sus 2 hijos quieren pasar un río en una balsa, pero la balsa solo aguanta 80 kg. El padre pesa 80 kg y cada uno de los hijos pesa 40 kg. ¿Cómo pasarán? Teniendo que llevar la balsa otra vez de vuelta para que pasen todos.</h2>
+  </div>
+  <div class="river-container">
+    <div class="characters">
+      <img src="./Papa.png" alt="Señor" class="person man" id="man">
+      <img src="./Nino.png" alt="Niño 1" class="person child1" id="child1">
+      <img src="./Nina.png" alt="Niño 2" class="person child2" id="child2">
+    </div>
+    <div class="river"></div>
+    <div class="raft">
+      <div class="man"></div>
+    </div>
+    <div class="right-side" style="position: absolute; right: 20px; bottom: 60px;"></div>
+  </div>
+
+  <div class="controls">
+    <button id="manButton">Subir Señor</button>
+    <button id="child1Button">Subir Niño 1</button>
+    <button id="child2Button">Subir Niño 2</button>
+    <button id="cross">Cruzar</button>
+    <button id="crossBack">Cruzar de regreso</button>
+  </div>
+
+  <p id="message"></p>
+  <button id="back-button" onclick="goBack()">Volver al inicio</button>
+  <script src="script.js"></script>
+</body>
+</html>

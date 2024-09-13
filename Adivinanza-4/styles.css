@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin-bottom: 20px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 columnas para los 3 cuadros */
+    grid-template-rows: repeat(2, 100px);    /* 2 filas para los 2 cuadros */
+    position: relative;
+    margin: 20px;
+    gap: 0; /* No queremos espacio entre las aristas */
+  }
+  
+  .edge {
+    background-color: teal;
+    cursor: pointer;
+  }
+  
+  /* Definir el tamaño de las aristas */
+  .horizontal {
+    width: 100px;
+    height: 5px;
+  }
+  
+  .vertical {
+    width: 5px;
+    height: 100px;
+    position: absolute;
+  }
+  
+  #contenido {
+    display: none;
+    margin-top: 10px;
+  }
+
+  /* Aristas horizontales (9 en total) */
+  /* Fila superior */
+  [data-edge="1"] { grid-column: 1 / 2; grid-row: 1; }
+  [data-edge="2"] { grid-column: 2 / 3; grid-row: 1; }
+  [data-edge="3"] { grid-column: 3 / 4; grid-row: 1; }
+  /* Fila intermedia */
+  [data-edge="4"] { grid-column: 1 / 2; grid-row: 2; }
+  [data-edge="5"] { grid-column: 2 / 3; grid-row: 2; }
+  [data-edge="6"] { grid-column: 3 / 4; grid-row: 2; }
+  /* Fila inferior */
+  [data-edge="7"] { grid-column: 1 / 2; grid-row: 3; }
+  [data-edge="8"] { grid-column: 2 / 3; grid-row: 3; }
+  [data-edge="9"] { grid-column: 3 / 4; grid-row: 3; }
+  
+  /* Aristas verticales (8 en total) */
+  /* Columna izquierda */
+  [data-edge="10"] { grid-column: 1 / 2; grid-row: 1 / 2; left: -2px; }
+  [data-edge="11"] { grid-column: 1 / 2; grid-row: 2 / 3; left: -2px; }
+  /* Columna intermedia */
+  [data-edge="12"] { grid-column: 2 / 3; grid-row: 1 / 2; left: -2px; }
+  [data-edge="13"] { grid-column: 2 / 3; grid-row: 2 / 3; left: -2px; }
+  /* Columna derecha */
+  [data-edge="14"] { grid-column: 3 / 4; grid-row: 1 / 2; left: -2px; }
+  [data-edge="15"] { grid-column: 3 / 4; grid-row: 2 / 3; left: -2px; }
+  /* Extremos derecho e izquierdo */
+  [data-edge="16"] { grid-column: 4 / 5; grid-row: 1 / 2; left: -2px; }
+  [data-edge="17"] { grid-column: 4 / 5; grid-row: 2 / 3; left: -2px; }
+  
+  .hidden {
+    background-color: transparent;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+  #back-button {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#back-button:hover {
+    background-color: #218838;
+}
